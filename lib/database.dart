@@ -1,6 +1,8 @@
 import 'package:mysql1/mysql1.dart';
-
+//Classe responsável pela configuração do banco de dados
 class Database {
+
+  // Método responsável pela abertura da conexão com o banco de dados 
   Future<MySqlConnection> openConnection() async {
     var settings = ConnectionSettings(
         host: 'localhost',
@@ -14,3 +16,16 @@ class Database {
     return connection;
   }
 }
+
+/*
+ESCRIP DO BANCO DE DADOS:
+
+create database dart_mysql;
+use dart_mysql;
+
+create table aluno(
+ id int not null primary key auto_increment,
+ nome varchar(200)
+);
+
+ */
